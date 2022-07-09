@@ -13,10 +13,12 @@ body {
 
 .nav {
   display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
   border-radius: 5em;
   background-color: rgba(240, 248, 255, 0.63);
   border: 5px solid rgba(0, 0, 255, 0.321);
-  text-align: center;
   width: 200px;
 }
 

@@ -45,8 +45,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-        <br></br>
         <header className="App-header">GROCERY LIST</header>
         <br></br>
 
