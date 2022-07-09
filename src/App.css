@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body {
+  background: #000 center/cover url("screamingchild.jpg") no-repeat;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  display: grid;
+  grid-auto-flow: dense;
+  padding: 20px;
+  justify-content: space-between;
+  grid-gap: 20px;
+  height: 100vh;
+  border: 5px solid rgba(0, 0, 255, 0.321);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 5em;
+  background-color: rgba(240, 248, 255, 0.63);
+  border: 5px solid rgba(0, 0, 255, 0.321);
+  text-align: center;
+  width: 200px;
+}
+
+header {
+  font-size: 24pt;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 5em;
+
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  display: flex;
+  border: 100px;
+  padding-left: 200px;
+  flex-direction: row;
+  border-radius: 5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: inline;
+  justify-content: center;
+  border-radius: 5em;
+  border: 5px solid rgba(0, 0, 255, 0.321);
+
+}
+
+.hi {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  border-radius: 5em;
+  border: 5px solid rgba(0, 0, 255, 0.321);
+
+}
+
+.grocerylist {
+  display: flex;
+  align-items: left;
+  padding: 3px;
+  margin: 5px;
+  flex-direction: column;
+  border-radius: 5em;
+
 }
