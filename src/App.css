@@ -1,7 +1,7 @@
 body {
   background: #000 center/cover url("screamingchild.jpg") no-repeat;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-  display: grid;
+  display: relative;
   grid-auto-flow: dense;
   padding: 20px;
   justify-content: space-between;
@@ -11,16 +11,6 @@ body {
 
 }
 
-.nav {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  text-align: center;
-  border-radius: 5em;
-  background-color: rgba(240, 248, 255, 0.63);
-  border: 5px solid rgba(0, 0, 255, 0.321);
-  width: 200px;
-}
 
 header {
   font-size: 24pt;
@@ -38,29 +28,49 @@ h1 {
   border-radius: 5em;
 }
 
-form {
+.form {
   display: inline;
   justify-content: center;
-  border-radius: 5em;
+  border-radius: 3em;
   border: 5px solid rgba(0, 0, 255, 0.321);
-
+  font-size: 14pt;
+  font-weight: bold;
+  height: 150px;
+  width: 150px;
 }
 
-.hi {
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  border-radius: 5em;
-  border: 5px solid rgba(0, 0, 255, 0.321);
 
+
+.buy{
+  display: flexbox;
+    padding-left: 200px;
+    margin-left: 350px;
+    border-radius: 5em;
+    padding: 5px;
 }
-
 .grocerylist {
   display: flex;
-  align-items: left;
-  padding: 3px;
-  margin: 5px;
-  flex-direction: column;
+  padding-left: 200px;
+  margin-left: 50px;
   border-radius: 5em;
+  padding: 5px;
+}
 
+
+button {
+  display: flex;
+  font-size: 14pt;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5em;
+  background-color: rgba(147, 236, 239, 0.529);
+  border: 5px solid rgba(0, 0, 255, 0.321);
+  width: 100px;
+}
+
+input {
+  border-radius: 3em;
+  height: 25px;
 }

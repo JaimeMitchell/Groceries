@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './components/NavBar'
 import GroceryData from './GroceryData';
 import GroceryList from './components/GroceryList'
 import { Component } from "react";
@@ -18,6 +17,7 @@ class App extends Component {
   // step 2: when event happens change State Object above, in step 1.
   handleChange = (event) => {
     this.setState({ [event.target.id]: event.target.value })
+    
   }
 
   // step 3: Prevent the default State above, which would keep it empty
@@ -48,7 +48,7 @@ class App extends Component {
         <header className="App-header">GROCERY LIST</header>
         <br></br>
 
-        <form onSubmit={this.handleSubmit}>
+        <form className='form' onSubmit={this.handleSubmit}>
 
           <label text="Item">Item</label>
           <input type="text" value={this.state.Item} onChange={this.handleChange} id="Item" />
@@ -59,10 +59,10 @@ class App extends Component {
           <label text="Quantity">Quantity</label>
           <input type="text" value={this.state.Quantity} onChange={this.handleChange} id="Quantity" />
 
-          <label text="isPurchased">Purchased?</label>
+          <label className="purchased" text="isPurchased">Purchased?</label>
           <input type="checkbox" value={this.state.isPurchased} onChange={this.handleChange} id='isPurchased' />
 
-          <input type="submit" />
+          <input className='submit' type="submit" />
         </form>
 
         <GroceryList GroceryData={this.state.GroceryData} />
