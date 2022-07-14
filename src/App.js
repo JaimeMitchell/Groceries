@@ -1,5 +1,5 @@
 import './App.css';
-import GroceryData from './GroceryData';
+import GroceryData from './groceryData';
 import GroceryList from './components/GroceryList'
 import { Component } from "react";
 
@@ -17,7 +17,7 @@ class App extends Component {
   // step 2: when event happens change State Object above, in step 1.
   handleChange = (event) => {
     this.setState({ [event.target.id]: event.target.value })
-    
+
   }
 
   // step 3: Prevent the default State above, which would keep it empty
@@ -32,16 +32,18 @@ class App extends Component {
       Quantity: this.state.Quantity,
       isPurchased: this.state.isPurchased
     }
-
+    //DOES THIS RESET THE STATE WHILE KEEPING THE ADDED ITEMS TO THE ARRAY
     this.setState({
       GroceryData: [newGrocery, ...this.state.GroceryData],
       Items: "",
       Units: "",
       Quantity: "",
-      isPurchased: false
+      isPurchased: true
     })
+
     console.log(event)
   }
+
   render() {
     return (
       <div className="App">
@@ -63,6 +65,7 @@ class App extends Component {
           <input type="checkbox" value={this.state.isPurchased} onChange={this.handleChange} id='isPurchased' />
 
           <input className='submit' type="submit" />
+          
         </form>
 
         <GroceryList GroceryData={this.state.GroceryData} />
